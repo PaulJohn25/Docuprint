@@ -18,14 +18,14 @@ const cardItems: {
     title: "Track Your Print Jobs with Ease",
     description:
       "Track your print jobs effortlessly with real-time updates on DocuPrint.",
-    imgUrl: "/Printer-rafiki.png",
+    imgUrl: "/10838258_4579608.jpg",
     link: [{ href: "/sign-up", text: "Sign Up" }],
   },
   {
     title: "Convenient Dashboard for Customers and Print Shop Owners",
     description:
       "Manage your printing tasks effortlessly with our user-friendly dashboard.",
-    imgUrl: "/Printer-rafiki.png",
+    imgUrl: "/7140733_3556960.jpg",
     link: [{ href: "/get-started", text: "Get Started" }],
   },
 ];
@@ -34,11 +34,11 @@ const FeaturesSection = () => {
   return (
     <section className="w-[90%] mx-auto">
       <div className="mt-[5rem]">
-        <TypographyH2 className="text-center">
+        <TypographyH2 className="text-center lg:text-5xl">
           Easily Connect with Local Print Shops for Your Printing Needs
         </TypographyH2>
       </div>
-      <div className="flex flex-col gap-5 mt-10">
+      <div className="flex flex-col justify-center gap-5 mt-10 lg:mt-12 md:flex-row md:gap-8 items-center sm:items-stretch">
         {cardItems.map((item) => (
           <FeatureCard
             key={item.title}

@@ -9,7 +9,7 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { TypographyH3 } from "@/components/ui/typography";
+import { ChevronRightIcon } from "@heroicons/react/24/outline";
 
 interface FeatureCardProps {
   title: string;
@@ -26,24 +26,28 @@ const FeatureCard = ({
 }: FeatureCardProps) => {
   return (
     <Card className="w-full max-w-sm overflow-hidden">
-      <div className="relative w-full h-48">
+      <div className="relative w-full h-60">
         <Image
           src={urlImg}
-          alt="title"
+          alt={title}
           fill
-          style={{ objectFit: "cover" }}
+          className="object-cover w-full h-full"
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
       </div>
       <CardHeader>
-        <CardTitle>{title}</CardTitle>
+        <CardTitle className="lg:text-xl">{title}</CardTitle>
       </CardHeader>
       <CardContent>
-        <CardDescription>{description}</CardDescription>
+        <CardDescription className="md:text-base">
+          {description}
+        </CardDescription>
       </CardContent>
       <CardFooter>
         <Button asChild>
-          <Link href={link.href}>{link.text}</Link>
+          <Link href={link.href}>
+            {link.text} <ChevronRightIcon />
+          </Link>
         </Button>
       </CardFooter>
     </Card>

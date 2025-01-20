@@ -30,12 +30,12 @@ const HeroSection = () => {
             </Button>
           </div>
         </div>
-        <div className="lg:w-1/2">
+        <div className="w-full h-auto">
           <Image
-            src="/hero_image-removebg-preview.png"
+            src="/12978229_5115105.jpg"
             alt="Printer illustration showcasing local print shop services"
-            width={1100}
-            height={1100}
+            width={1400}
+            height={1000}
             priority
             className="w-full h-auto object-contain"
           />

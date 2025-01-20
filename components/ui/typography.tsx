@@ -37,12 +37,25 @@ export function TypographyH3({ children, className }: TypographyProps) {
   return (
     <h3
       className={cn(
-        `scroll-m-20 text-2xl font-semibold tracking-tight`,
+        `${montserrat.className} scroll-m-20 text-2xl font-semibold tracking-tight`,
         className
       )}
     >
       {children}
     </h3>
+  );
+}
+
+export function TypographyH4({ children, className }: TypographyProps) {
+  return (
+    <h4
+      className={cn(
+        `${montserrat.className} scroll-m-20 text-xl font-semibold tracking-tight`,
+        className
+      )}
+    >
+      {children}
+    </h4>
   );
 }
 
@@ -56,5 +69,11 @@ export function TypographyP({ children, className }: TypographyProps) {
     >
       {children}
     </p>
+  );
+}
+
+export function TypographyLarge({ children, className }: TypographyProps) {
+  return (
+    <div className={cn(`text-lg font-semibold`, className)}>{children}</div>
   );
 }

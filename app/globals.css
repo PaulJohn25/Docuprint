@@ -4,7 +4,7 @@
 
 @media (prefers-color-scheme: light) {
   :root {
-    --background: #f1f5f9;
+    --background: #faf8f6;
     --foreground: #020617;
   }
 }
@@ -18,7 +18,6 @@ body {
 ::after {
   box-sizing: border-box;
 }
-
 
 @layer base {
   :root {
