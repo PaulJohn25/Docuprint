@@ -57,7 +57,7 @@ const FaqSection = () => {
         <div className="space-y-3 mt-5">
           <TypographyLarge>Still have questions?</TypographyLarge>
           <p className={`${montserrat.className} text-sm font-medium`}>
-            We're here to help you!
+            We&apos;re here to help you!
           </p>
           <Button asChild variant="outline">
             <Link href="/">Contact</Link>
