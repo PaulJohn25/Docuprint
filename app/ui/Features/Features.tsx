@@ -1,5 +1,5 @@
 import { TypographyH2 } from "@/components/ui/typography";
-import FeatureCard from "./FeatureCard";
+import FeatureCard from "@/app/ui/features/FeatureCard";
 
 const cardItems: {
   title: string;
@@ -19,7 +19,7 @@ const cardItems: {
     description:
       "Track your print jobs effortlessly with real-time updates on DocuPrint.",
     imgUrl: "/10838258_4579608.jpg",
-    link: [{ href: "/sign-up", text: "Sign Up" }],
+    link: [{ href: "/signup", text: "Sign Up" }],
   },
   {
     title: "Convenient Dashboard for Customers and Print Shop Owners",

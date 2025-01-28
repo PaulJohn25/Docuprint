@@ -1,10 +1,10 @@
-import Header from "@/app/ui/Header/Header";
-import HeroSection from "@/app/ui/Hero/Hero";
-import AboutSection from "@/app/ui/About/About";
-import FeaturesSection from "@/app/ui/Features/Features";
-import FaqSection from "@/app/ui/Faq/Faq";
-import CTASection from "@/app/ui/CTA/CTA";
-import Footer from "@/app/ui/Footer/Footer";
+import Header from "@/app/ui/header/Header";
+import HeroSection from "@/app/ui/hero/Hero";
+import AboutSection from "@/app/ui/about/About";
+import FeaturesSection from "@/app/ui/features/Features";
+import FaqSection from "@/app/ui/faq/Faq";
+import CTASection from "@/app/ui/cta/CTA";
+import Footer from "@/app/ui/footer/Footer";
 
 export default function Home() {
   return (

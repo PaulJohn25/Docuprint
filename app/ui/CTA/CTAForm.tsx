@@ -53,7 +53,7 @@ const CTAForm = () => {
             </FormItem>
           )}
         />
-        <Button type="submit" className="w-full" size="lg">
+        <Button type="submit" className="w-full lg:text-base" size="lg">
           Get Started
         </Button>
       </form>

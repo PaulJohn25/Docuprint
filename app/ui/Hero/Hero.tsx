@@ -17,18 +17,11 @@ const HeroSection = () => {
             you and trusted local printers, ensuring quality service and quick
             turnaround.
           </TypographyP>
-          <div className="flex items-center gap-3">
-            <Button asChild size="lg">
-              <Link href="/" className="md:text-base">
-                Get Started
-              </Link>
-            </Button>
-            <Button asChild variant="outline" size="lg">
-              <Link href="/" className="md:text-base">
-                Learn More
-              </Link>
-            </Button>
-          </div>
+          <Button asChild size="lg">
+            <Link href="/login" className="md:text-base">
+              Get Started
+            </Link>
+          </Button>
         </div>
         <div className="w-full h-auto">
           <Image

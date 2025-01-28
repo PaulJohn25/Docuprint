@@ -18,7 +18,7 @@ import {
 } from "@/components/ui/collapsible";
 import { useState } from "react";
 import { NavItem } from "@/app/types/navigation";
-import AuthButton from "@/app/ui/AuthButton";
+import AuthButton from "@/app/ui/auth-button";
 
 interface MobileMenuProps {
   navItems: NavItem[];
@@ -31,10 +31,10 @@ const MobileMenu = ({ navItems }: MobileMenuProps) => {
   return (
     <div className="flex gap-3">
       <div className="hidden sm:flex md:hidden items-center justify-end space-x-3 ">
-        <AuthButton href="/" text="Login" variant="outline" />
-        <AuthButton href="/" text="Sign Up" />
+        <AuthButton href="/login" text="Login" variant="outline" />
+        <AuthButton href="/signup" text="Sign Up" />
       </div>
-      <AuthButton href="/" text="Sign Up" className="sm:hidden" />
+      <AuthButton href="/signup" text="Sign Up" className="sm:hidden" />
       <Sheet open={isOpen} onOpenChange={setIsOpen}>
         <SheetTrigger asChild>
           <Button variant="ghost" className="lg:hidden" size="icon">

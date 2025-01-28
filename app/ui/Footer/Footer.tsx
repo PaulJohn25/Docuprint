@@ -17,7 +17,7 @@ const Footer = () => {
   return (
     <footer className="w-[90%] mx-auto">
       <div className="mx-auto mt-[5rem] md:py-16">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/*Company Info*/}
           <div className="mb-8 md:mb-0">
             <Link href="/" className="inline-flex items-center gap-2">
@@ -99,7 +99,7 @@ const Footer = () => {
                   className="hover:text-blue-500 transition-colors flex items-center"
                 >
                   <Mail className="h-5 w-5 mr-2 text-blue-500" />
-                  <span>info@docuprint.com</span>
+                  <span>support@docuprint.com</span>
                 </Link>
               </li>
               <li>
@@ -117,14 +117,13 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-
-          {/*Copyright*/}
-          <Separator className="my-2" />
-          <div className="text-sm text-center">
-            <p className={`${inter.className}`}>
-              &copy; {new Date().getFullYear()} DocuPrint. All rights reserved.
-            </p>
-          </div>
+        </div>
+        {/*Copyright*/}
+        <Separator className="my-8" />
+        <div className="text-sm text-center">
+          <p className={`${inter.className}`}>
+            &copy; {new Date().getFullYear()} DocuPrint. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>

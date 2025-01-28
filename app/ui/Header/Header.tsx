@@ -1,11 +1,11 @@
 "use client";
 
 import { NavItem } from "@/app/types/navigation";
-import MobileMenu from "@/app/ui/Header/MobileMenu";
-import NavigationMenuComponent from "@/app/ui/Header/NavigationMenu";
+import MobileMenu from "@/app/ui/header/MobileMenu";
+import NavigationMenuComponent from "@/app/ui/header/NavigationMenu";
 import Link from "next/link";
 import Image from "next/image";
-import AuthButton from "@/app/ui/AuthButton";
+import AuthButton from "@/app/ui/auth-button";
 
 const navItems: NavItem[] = [
   { href: "/print-services", title: "Print Services" },
@@ -26,7 +26,7 @@ const navItems: NavItem[] = [
         description: "Get answers to your questions",
       },
       {
-        href: "/contact-center",
+        href: "/contact",
         title: "Contact Us",
         description: "React our to our support team",
       },
@@ -56,8 +56,8 @@ const Header = () => {
         <NavigationMenuComponent navItems={navItems} />
         <MobileMenu navItems={navItems} />
         <div className="hidden lg:flex items-center justify-end space-x-3 flex-1">
-          <AuthButton href="/" text="Login" variant="outline" />
-          <AuthButton href="/" text="Sign Up" />
+          <AuthButton href="/login" text="Login" variant="outline" />
+          <AuthButton href="/signup" text="Sign Up" />
         </div>
       </div>
     </header>

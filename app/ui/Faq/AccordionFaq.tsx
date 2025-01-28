@@ -14,7 +14,9 @@ const AccordionFaq = ({
   return (
     <Accordion type="single" collapsible>
       <AccordionItem value={`item-${itemNumber}`}>
-        <AccordionTrigger className="text-base">{title}</AccordionTrigger>
+        <AccordionTrigger className="text-base md:text-xl font-semibold">
+          {title}
+        </AccordionTrigger>
         <AccordionContent className="md:text-base max-w-[60ch] text-justify">
           {content}
         </AccordionContent>
