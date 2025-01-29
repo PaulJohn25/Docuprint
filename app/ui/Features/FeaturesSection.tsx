@@ -1,5 +1,5 @@
 import { TypographyH2 } from "@/components/ui/typography";
-import FeatureCard from "@/app/ui/features/FeatureCard";
+import FeatureCard from "@/app/ui/Features/FeatureCard";
 
 const cardItems: {
   title: string;

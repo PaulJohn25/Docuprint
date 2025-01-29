@@ -9,7 +9,7 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
-import ListItem from "@/app/ui/header/ListItem";
+import ListItem from "@/app/ui/Header/ListItem";
 import Link from "next/link";
 import { NavItem } from "@/app/types/navigation";
 

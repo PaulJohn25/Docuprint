@@ -4,7 +4,7 @@ import {
   TypographyLarge,
 } from "@/components/ui/typography";
 import { AccordionData } from "@/app/types/faqAccordion";
-import AccordionFaq from "@/app/ui/faq/AccordionFaq";
+import AccordionFaq from "@/app/ui/FAQ/AccordionFaq";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { montserrat } from "@/app/ui/fonts";
