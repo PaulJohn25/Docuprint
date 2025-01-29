@@ -15,7 +15,7 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import { montserrat } from "../fonts";
+import { montserrat } from "./fonts";
 
 const formSchema = z.object({
   email: z.string().email(),

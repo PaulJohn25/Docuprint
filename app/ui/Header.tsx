@@ -1,8 +1,6 @@
-"use client";
-
 import { NavItem } from "@/app/types/navigation";
-import MobileMenu from "@/app/ui/Header/MobileMenu";
-import NavigationMenuComponent from "@/app/ui/Header/NavigationMenu";
+import MobileMenu from "@/app/ui/MobileMenu";
+import NavigationMenuComponent from "@/app/ui/NavigationMenu";
 import Link from "next/link";
 import Image from "next/image";
 import AuthButton from "@/app/ui/auth-button";
