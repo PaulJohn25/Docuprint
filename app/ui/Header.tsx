@@ -1,9 +1,12 @@
+"use client";
+
 import { NavItem } from "@/app/types/navigation";
 import MobileMenu from "@/app/ui/MobileMenu";
 import NavigationMenuComponent from "@/app/ui/NavigationMenu";
 import Link from "next/link";
 import Image from "next/image";
 import AuthButton from "@/app/ui/auth-button";
+import { motion, useScroll } from "motion/react";
 
 const navItems: NavItem[] = [
   { href: "/print-services", title: "Print Services" },
@@ -33,6 +36,8 @@ const navItems: NavItem[] = [
 ];
 
 const Header = () => {
+  const { scrollYProgress } = useScroll();
+
   return (
     <header className="sticky top-0 w-full border-b bg-slate-50 supports-[backrop-filter]:bg-background/60 z-10">
       <div className="container w-[90%] flex h-14 items-center mx-auto">
@@ -57,6 +62,15 @@ const Header = () => {
           <AuthButton href="/login" text="Login" variant="outline" />
           <AuthButton href="/signup" text="Sign Up" />
         </div>
+      </div>
+      <div className="absolute bottom-0 left-0 right-0 h-[4px] overflow-hidden w-full">
+        <motion.div
+          id="scroll-indicator"
+          className="h-full origin-left bg-black"
+          style={{
+            scaleX: scrollYProgress,
+          }}
+        />
       </div>
     </header>
   );
