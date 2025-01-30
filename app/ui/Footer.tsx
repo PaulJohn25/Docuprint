@@ -14,6 +14,11 @@ import { TypographyLarge } from "@/components/ui/typography";
 import { Separator } from "@/components/ui/separator";
 
 const Footer = () => {
+  const plusCode: string = "5JR2+94P Guinobatan, Albay";
+  const googleMapsUrl: string = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+    plusCode
+  )}`;
+
   return (
     <footer className="w-[90%] mx-auto">
       <div className="mx-auto mt-[5rem] md:py-16">
@@ -95,10 +100,11 @@ const Footer = () => {
             <ul className={`${inter.className} space-y-2`}>
               <li>
                 <Link
-                  href="#"
+                  href="mailto:support@docuprint.com"
                   className="hover:text-blue-500 transition-colors flex items-center"
+                  rel="noopener noreferrer"
                 >
-                  <Mail className="h-5 w-5 mr-2 text-blue-500" />
+                  <Mail className="h-5 w-5 lg:h-6 lg:w-6 mr-2 text-blue-500" />
                   <span>support@docuprint.com</span>
                 </Link>
               </li>
@@ -107,20 +113,27 @@ const Footer = () => {
                   href="tel:+639982472976"
                   className="hover:text-blue-500 transition-colors flex items-center"
                 >
-                  <Phone className="h-5 w-5 mr-2 text-blue-500" />
+                  <Phone className="h-5 w-5 lg:h-6 lg:w-6 mr-2 text-blue-500" />
                   <span>(+63) 998-247-2976</span>
                 </Link>
               </li>
               <li className="flex items-center">
-                <MapPin className="h-5 w-5 mr-2 text-blue-500" />
-                <span>Mabini St. Pobalicacion Guinobatan, Albay</span>
+                <Link
+                  className="hover:text-blue-500 transition-colors flex items-center"
+                  href={googleMapsUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <MapPin className="h-5 w-5 lg:h-6 lg:w-6 mr-2 text-blue-500" />
+                  <span>5JR2+94P Guinobatan, Albay</span>
+                </Link>
               </li>
             </ul>
           </div>
         </div>
         {/*Copyright*/}
         <Separator className="my-8" />
-        <div className="text-sm text-center">
+        <div className="text-sm text-center lg:text-base">
           <p className={`${inter.className}`}>
             &copy; {new Date().getFullYear()} DocuPrint. All rights reserved.
           </p>

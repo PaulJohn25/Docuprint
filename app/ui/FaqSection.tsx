@@ -8,6 +8,7 @@ import AccordionFaq from "@/app/ui/AccordionFaq";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { montserrat } from "@/app/ui/fonts";
+import AnimateSection from "./AnimateSection";
 
 const accordionData: AccordionData[] = [
   {
@@ -39,40 +40,42 @@ const accordionData: AccordionData[] = [
 
 const FaqSection = () => {
   return (
-    <section className="w-[90%] mx-auto">
-      <div className="container mt-[5rem] flex flex-col md:grid md:grid-cols-2 gap-5">
-        <div className="w-full">
-          <div>
-            <TypographyH2 className="lg:text-5xl mb-3">FAQs</TypographyH2>
-            <TypographyP className="max-w-[60ch] sm:max-w-[40ch]">
-              Find answers to your must common questions about our printing
-              services and local print shops.
-            </TypographyP>
+    <AnimateSection>
+      <section className="w-[90%] mx-auto">
+        <div className="container mt-[5rem] flex flex-col md:grid md:grid-cols-2 gap-5">
+          <div className="w-full">
+            <div>
+              <TypographyH2 className="lg:text-5xl mb-3">FAQs</TypographyH2>
+              <TypographyP className="max-w-[60ch] sm:max-w-[40ch]">
+                Find answers to your must common questions about our printing
+                services and local print shops.
+              </TypographyP>
+            </div>
+            <div className="space-y-2 mt-5">
+              <TypographyLarge>Have another questions?</TypographyLarge>
+              <p
+                className={`${montserrat.className} text-sm md:text-base font-medium`}
+              >
+                We&apos;re here to help you!
+              </p>
+              <Button asChild variant="outline" size="lg">
+                <Link href="/contact">Contact</Link>
+              </Button>
+            </div>
           </div>
-          <div className="space-y-2 mt-5">
-            <TypographyLarge>Have another questions?</TypographyLarge>
-            <p
-              className={`${montserrat.className} text-sm md:text-base font-medium`}
-            >
-              We&apos;re here to help you!
-            </p>
-            <Button asChild variant="outline" size="lg">
-              <Link href="/contact">Contact</Link>
-            </Button>
+          <div className="w-full">
+            {accordionData.map((data, index) => (
+              <AccordionFaq
+                key={data.title}
+                title={data.title}
+                content={data.content}
+                itemNumber={index}
+              />
+            ))}
           </div>
         </div>
-        <div className="w-full">
-          {accordionData.map((data, index) => (
-            <AccordionFaq
-              key={data.title}
-              title={data.title}
-              content={data.content}
-              itemNumber={index}
-            />
-          ))}
-        </div>
-      </div>
-    </section>
+      </section>
+    </AnimateSection>
   );
 };
 

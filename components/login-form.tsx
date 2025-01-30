@@ -98,6 +98,8 @@ export function LoginForm({
               src="/login-image.jpg"
               alt="Image"
               className="absolute inset-0 h-full w-full object-cover dark:brightness-[0.2] dark:grayscale"
+              width={2000}
+              height={2000}
             />
           </div>
         </CardContent>

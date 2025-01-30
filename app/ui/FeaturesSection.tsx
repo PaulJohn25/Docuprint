@@ -1,5 +1,6 @@
 import { TypographyH2 } from "@/components/ui/typography";
 import FeatureCard from "@/app/ui/FeatureCard";
+import AnimateSection from "./AnimateSection";
 
 const cardItems: {
   title: string;
@@ -32,24 +33,26 @@ const cardItems: {
 
 const FeaturesSection = () => {
   return (
-    <section className="w-[90%] mx-auto">
-      <div className="mt-[5rem]">
-        <TypographyH2 className="text-center lg:text-5xl">
-          Easily Connect with Local Print Shops for Your Printing Needs
-        </TypographyH2>
-      </div>
-      <div className="flex flex-col justify-center gap-5 mt-10 lg:mt-12 md:flex-row md:gap-8 items-center sm:items-stretch">
-        {cardItems.map((item) => (
-          <FeatureCard
-            key={item.title}
-            title={item.title}
-            description={item.description}
-            urlImg={item.imgUrl}
-            link={item.link[0]}
-          />
-        ))}
-      </div>
-    </section>
+    <AnimateSection>
+      <section className="w-[90%] mx-auto">
+        <div className="mt-[5rem]">
+          <TypographyH2 className="text-center lg:text-5xl">
+            Easily Connect with Local Print Shops for Your Printing Needs
+          </TypographyH2>
+        </div>
+        <div className="flex flex-col justify-center gap-5 mt-10 lg:mt-12 md:flex-row md:gap-8 items-center sm:items-stretch">
+          {cardItems.map((item) => (
+            <FeatureCard
+              key={item.title}
+              title={item.title}
+              description={item.description}
+              urlImg={item.imgUrl}
+              link={item.link[0]}
+            />
+          ))}
+        </div>
+      </section>
+    </AnimateSection>
   );
 };
 

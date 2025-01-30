@@ -32,6 +32,7 @@ const Page = () => {
               <Link
                 href="mailto:support@docuprint.com"
                 className="text-blue-700 font-medium"
+                rel="noopener noreferrer"
               >
                 support@docuprint.com
               </Link>
